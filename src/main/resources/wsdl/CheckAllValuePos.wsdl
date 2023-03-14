@@ -1,0 +1,607 @@
+<?xml version="1.0" ?><wsdl:definitions name="CheckAllValuePos" targetNamespace="http://service.client.pos.shopy.viettel.com/" xmlns:ns1="http://service.client.pos.shopy.viettel.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://service.client.pos.shopy.viettel.com/" xmlns="http://service.client.pos.shopy.viettel.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="activeKeyValueVO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codeGen" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="isActive" type="xs:boolean"></xs:element>
+      <xs:element minOccurs="0" name="newPolicy" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="numFreeAccount" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="servicePass" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="checkCodeVO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codeIsUsed" type="xs:boolean"></xs:element>
+      <xs:element minOccurs="0" name="content" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="isBranchUser" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="isUsed" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="isUsedAll" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="isUsedDate" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="locationChainId" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="locationPromotionId" type="xs:int"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="customersVO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="birthday" type="xs:dateTime"></xs:element>
+      <xs:element minOccurs="0" name="branchId" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="buyDate" type="xs:dateTime"></xs:element>
+      <xs:element minOccurs="0" name="currentPoint" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="customersAddress" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="customersName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="customersPhone" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="debt" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="description" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="email" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="gender" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="id" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="idCustomers" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="idGroup" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="idPos" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="membershipId" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="membershipTotalPoint" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="name" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="nameBranch" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="nameGroup" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="phone" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="strBirtDay" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="totalCustomer" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="totalMoney" type="xs:long"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="licenseKeyServiceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SHOPONE"></xs:enumeration>
+      <xs:enumeration value="CAFE"></xs:enumeration>
+      <xs:enumeration value="KARA"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="activeKeyProNew" type="activeKeyProNew"></xs:element>
+  <xs:complexType name="activeKeyProNew">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg5" type="licenseKeyServiceType"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="activeKeyProNewResponse" type="activeKeyProNewResponse"></xs:element>
+  <xs:complexType name="activeKeyProNewResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="updatePointOfCustomer" type="updatePointOfCustomer"></xs:element>
+  <xs:complexType name="updatePointOfCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg4" type="xs:double"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="updatePointOfCustomerResponse" type="updatePointOfCustomerResponse"></xs:element>
+  <xs:complexType name="updatePointOfCustomerResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getDateDatabase" type="getDateDatabase"></xs:element>
+  <xs:complexType name="getDateDatabase">
+    <xs:sequence></xs:sequence>
+  </xs:complexType>
+  <xs:element name="getDateDatabaseResponse" type="getDateDatabaseResponse"></xs:element>
+  <xs:complexType name="getDateDatabaseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:dateTime"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="updateSyncHourBranch" type="updateSyncHourBranch"></xs:element>
+  <xs:complexType name="updateSyncHourBranch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="updateSyncHourBranchResponse" type="updateSyncHourBranchResponse"></xs:element>
+  <xs:complexType name="updateSyncHourBranchResponse">
+    <xs:sequence></xs:sequence>
+  </xs:complexType>
+  <xs:element name="updateTotalPointOfSwapCustomer" type="updateTotalPointOfSwapCustomer"></xs:element>
+  <xs:complexType name="updateTotalPointOfSwapCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg4" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="arg5" type="xs:double"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="updateTotalPointOfSwapCustomerResponse" type="updateTotalPointOfSwapCustomerResponse"></xs:element>
+  <xs:complexType name="updateTotalPointOfSwapCustomerResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="activeKeyPro" type="activeKeyPro"></xs:element>
+  <xs:complexType name="activeKeyPro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg5" type="licenseKeyServiceType"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="activeKeyProResponse" type="activeKeyProResponse"></xs:element>
+  <xs:complexType name="activeKeyProResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="activeKeyValueVO"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="countTransaction" type="countTransaction"></xs:element>
+  <xs:complexType name="countTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="countTransactionResponse" type="countTransactionResponse"></xs:element>
+  <xs:complexType name="countTransactionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getNumRowConfigPos" type="getNumRowConfigPos"></xs:element>
+  <xs:complexType name="getNumRowConfigPos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getNumRowConfigPosResponse" type="getNumRowConfigPosResponse"></xs:element>
+  <xs:complexType name="getNumRowConfigPosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="checkCodeBranch" type="checkCodeBranch"></xs:element>
+  <xs:complexType name="checkCodeBranch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="checkCodeBranchResponse" type="checkCodeBranchResponse"></xs:element>
+  <xs:complexType name="checkCodeBranchResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="checkCodeVO"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getNumRowConfig" type="getNumRowConfig"></xs:element>
+  <xs:complexType name="getNumRowConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getNumRowConfigResponse" type="getNumRowConfigResponse"></xs:element>
+  <xs:complexType name="getNumRowConfigResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="activeKeyNew" type="activeKeyNew"></xs:element>
+  <xs:complexType name="activeKeyNew">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="activeKeyNewResponse" type="activeKeyNewResponse"></xs:element>
+  <xs:complexType name="activeKeyNewResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getLicenseKeyByShortKey" type="getLicenseKeyByShortKey"></xs:element>
+  <xs:complexType name="getLicenseKeyByShortKey">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getLicenseKeyByShortKeyResponse" type="getLicenseKeyByShortKeyResponse"></xs:element>
+  <xs:complexType name="getLicenseKeyByShortKeyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="countCategory" type="countCategory"></xs:element>
+  <xs:complexType name="countCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="countCategoryResponse" type="countCategoryResponse"></xs:element>
+  <xs:complexType name="countCategoryResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getPointOfCustomer" type="getPointOfCustomer"></xs:element>
+  <xs:complexType name="getPointOfCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getPointOfCustomerResponse" type="getPointOfCustomerResponse"></xs:element>
+  <xs:complexType name="getPointOfCustomerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="customersVO"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getLicenseKey" type="getLicenseKey"></xs:element>
+  <xs:complexType name="getLicenseKey">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getLicenseKeyResponse" type="getLicenseKeyResponse"></xs:element>
+  <xs:complexType name="getLicenseKeyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="checkSyncShop" type="checkSyncShop"></xs:element>
+  <xs:complexType name="checkSyncShop">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="checkSyncShopResponse" type="checkSyncShopResponse"></xs:element>
+  <xs:complexType name="checkSyncShopResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="updateCodeBranch" type="updateCodeBranch"></xs:element>
+  <xs:complexType name="updateCodeBranch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="updateCodeBranchResponse" type="updateCodeBranchResponse"></xs:element>
+  <xs:complexType name="updateCodeBranchResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="updatePointOfSwapCustomer" type="updatePointOfSwapCustomer"></xs:element>
+  <xs:complexType name="updatePointOfSwapCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg4" type="xs:double"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="updatePointOfSwapCustomerResponse" type="updatePointOfSwapCustomerResponse"></xs:element>
+  <xs:complexType name="updatePointOfSwapCustomerResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="activeKey" type="activeKey"></xs:element>
+  <xs:complexType name="activeKey">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="activeKeyResponse" type="activeKeyResponse"></xs:element>
+  <xs:complexType name="activeKeyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="activeKeyValueVO"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="activeKeyNewResponse">
+    <wsdl:part element="ns1:activeKeyNewResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="countTransactionResponse">
+    <wsdl:part element="ns1:countTransactionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDateDatabaseResponse">
+    <wsdl:part element="ns1:getDateDatabaseResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDateDatabase">
+    <wsdl:part element="ns1:getDateDatabase" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="activeKeyResponse">
+    <wsdl:part element="ns1:activeKeyResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="countCategory">
+    <wsdl:part element="ns1:countCategory" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateCodeBranchResponse">
+    <wsdl:part element="ns1:updateCodeBranchResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateSyncHourBranch">
+    <wsdl:part element="ns1:updateSyncHourBranch" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getNumRowConfigPos">
+    <wsdl:part element="ns1:getNumRowConfigPos" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="checkSyncShop">
+    <wsdl:part element="ns1:checkSyncShop" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="activeKeyProNewResponse">
+    <wsdl:part element="ns1:activeKeyProNewResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="activeKeyNew">
+    <wsdl:part element="ns1:activeKeyNew" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="countCategoryResponse">
+    <wsdl:part element="ns1:countCategoryResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateTotalPointOfSwapCustomer">
+    <wsdl:part element="ns1:updateTotalPointOfSwapCustomer" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePointOfCustomerResponse">
+    <wsdl:part element="ns1:updatePointOfCustomerResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="checkCodeBranch">
+    <wsdl:part element="ns1:checkCodeBranch" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getNumRowConfigPosResponse">
+    <wsdl:part element="ns1:getNumRowConfigPosResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="activeKey">
+    <wsdl:part element="ns1:activeKey" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePointOfSwapCustomerResponse">
+    <wsdl:part element="ns1:updatePointOfSwapCustomerResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="countTransaction">
+    <wsdl:part element="ns1:countTransaction" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="checkSyncShopResponse">
+    <wsdl:part element="ns1:checkSyncShopResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPointOfCustomerResponse">
+    <wsdl:part element="ns1:getPointOfCustomerResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateCodeBranch">
+    <wsdl:part element="ns1:updateCodeBranch" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLicenseKey">
+    <wsdl:part element="ns1:getLicenseKey" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="activeKeyProResponse">
+    <wsdl:part element="ns1:activeKeyProResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLicenseKeyResponse">
+    <wsdl:part element="ns1:getLicenseKeyResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="activeKeyProNew">
+    <wsdl:part element="ns1:activeKeyProNew" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePointOfCustomer">
+    <wsdl:part element="ns1:updatePointOfCustomer" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getNumRowConfig">
+    <wsdl:part element="ns1:getNumRowConfig" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateTotalPointOfSwapCustomerResponse">
+    <wsdl:part element="ns1:updateTotalPointOfSwapCustomerResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateSyncHourBranchResponse">
+    <wsdl:part element="ns1:updateSyncHourBranchResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLicenseKeyByShortKeyResponse">
+    <wsdl:part element="ns1:getLicenseKeyByShortKeyResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPointOfCustomer">
+    <wsdl:part element="ns1:getPointOfCustomer" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="activeKeyPro">
+    <wsdl:part element="ns1:activeKeyPro" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLicenseKeyByShortKey">
+    <wsdl:part element="ns1:getLicenseKeyByShortKey" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePointOfSwapCustomer">
+    <wsdl:part element="ns1:updatePointOfSwapCustomer" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getNumRowConfigResponse">
+    <wsdl:part element="ns1:getNumRowConfigResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="checkCodeBranchResponse">
+    <wsdl:part element="ns1:checkCodeBranchResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CheckAllValuePos">
+    <wsdl:operation name="activeKeyProNew">
+      <wsdl:input message="ns1:activeKeyProNew" name="activeKeyProNew">
+    </wsdl:input>
+      <wsdl:output message="ns1:activeKeyProNewResponse" name="activeKeyProNewResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePointOfCustomer">
+      <wsdl:input message="ns1:updatePointOfCustomer" name="updatePointOfCustomer">
+    </wsdl:input>
+      <wsdl:output message="ns1:updatePointOfCustomerResponse" name="updatePointOfCustomerResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDateDatabase">
+      <wsdl:input message="ns1:getDateDatabase" name="getDateDatabase">
+    </wsdl:input>
+      <wsdl:output message="ns1:getDateDatabaseResponse" name="getDateDatabaseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateSyncHourBranch">
+      <wsdl:input message="ns1:updateSyncHourBranch" name="updateSyncHourBranch">
+    </wsdl:input>
+      <wsdl:output message="ns1:updateSyncHourBranchResponse" name="updateSyncHourBranchResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTotalPointOfSwapCustomer">
+      <wsdl:input message="ns1:updateTotalPointOfSwapCustomer" name="updateTotalPointOfSwapCustomer">
+    </wsdl:input>
+      <wsdl:output message="ns1:updateTotalPointOfSwapCustomerResponse" name="updateTotalPointOfSwapCustomerResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activeKeyPro">
+      <wsdl:input message="ns1:activeKeyPro" name="activeKeyPro">
+    </wsdl:input>
+      <wsdl:output message="ns1:activeKeyProResponse" name="activeKeyProResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="countTransaction">
+      <wsdl:input message="ns1:countTransaction" name="countTransaction">
+    </wsdl:input>
+      <wsdl:output message="ns1:countTransactionResponse" name="countTransactionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNumRowConfigPos">
+      <wsdl:input message="ns1:getNumRowConfigPos" name="getNumRowConfigPos">
+    </wsdl:input>
+      <wsdl:output message="ns1:getNumRowConfigPosResponse" name="getNumRowConfigPosResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkCodeBranch">
+      <wsdl:input message="ns1:checkCodeBranch" name="checkCodeBranch">
+    </wsdl:input>
+      <wsdl:output message="ns1:checkCodeBranchResponse" name="checkCodeBranchResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNumRowConfig">
+      <wsdl:input message="ns1:getNumRowConfig" name="getNumRowConfig">
+    </wsdl:input>
+      <wsdl:output message="ns1:getNumRowConfigResponse" name="getNumRowConfigResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activeKeyNew">
+      <wsdl:input message="ns1:activeKeyNew" name="activeKeyNew">
+    </wsdl:input>
+      <wsdl:output message="ns1:activeKeyNewResponse" name="activeKeyNewResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLicenseKeyByShortKey">
+      <wsdl:input message="ns1:getLicenseKeyByShortKey" name="getLicenseKeyByShortKey">
+    </wsdl:input>
+      <wsdl:output message="ns1:getLicenseKeyByShortKeyResponse" name="getLicenseKeyByShortKeyResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="countCategory">
+      <wsdl:input message="ns1:countCategory" name="countCategory">
+    </wsdl:input>
+      <wsdl:output message="ns1:countCategoryResponse" name="countCategoryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPointOfCustomer">
+      <wsdl:input message="ns1:getPointOfCustomer" name="getPointOfCustomer">
+    </wsdl:input>
+      <wsdl:output message="ns1:getPointOfCustomerResponse" name="getPointOfCustomerResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLicenseKey">
+      <wsdl:input message="ns1:getLicenseKey" name="getLicenseKey">
+    </wsdl:input>
+      <wsdl:output message="ns1:getLicenseKeyResponse" name="getLicenseKeyResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkSyncShop">
+      <wsdl:input message="ns1:checkSyncShop" name="checkSyncShop">
+    </wsdl:input>
+      <wsdl:output message="ns1:checkSyncShopResponse" name="checkSyncShopResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCodeBranch">
+      <wsdl:input message="ns1:updateCodeBranch" name="updateCodeBranch">
+    </wsdl:input>
+      <wsdl:output message="ns1:updateCodeBranchResponse" name="updateCodeBranchResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePointOfSwapCustomer">
+      <wsdl:input message="ns1:updatePointOfSwapCustomer" name="updatePointOfSwapCustomer">
+    </wsdl:input>
+      <wsdl:output message="ns1:updatePointOfSwapCustomerResponse" name="updatePointOfSwapCustomerResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activeKey">
+      <wsdl:input message="ns1:activeKey" name="activeKey">
+    </wsdl:input>
+      <wsdl:output message="ns1:activeKeyResponse" name="activeKeyResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

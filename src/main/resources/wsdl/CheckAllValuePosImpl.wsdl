@@ -1,0 +1,183 @@
+<?xml version="1.0" ?><wsdl:definitions name="CheckAllValuePos" targetNamespace="http://impl.service.client.pos.shopy.viettel.com/" xmlns:ns1="http://service.client.pos.shopy.viettel.com/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://impl.service.client.pos.shopy.viettel.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:import location="CheckAllValuePos.wsdl" namespace="http://service.client.pos.shopy.viettel.com/">
+    </wsdl:import>
+  <wsdl:binding name="CheckAllValuePosSoapBinding" type="ns1:CheckAllValuePos">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+    <wsdl:operation name="activeKeyProNew">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="activeKeyProNew">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="activeKeyProNewResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePointOfCustomer">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="updatePointOfCustomer">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="updatePointOfCustomerResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDateDatabase">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getDateDatabase">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getDateDatabaseResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateSyncHourBranch">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="updateSyncHourBranch">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="updateSyncHourBranchResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTotalPointOfSwapCustomer">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="updateTotalPointOfSwapCustomer">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="updateTotalPointOfSwapCustomerResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activeKeyPro">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="activeKeyPro">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="activeKeyProResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="countTransaction">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="countTransaction">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="countTransactionResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNumRowConfigPos">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getNumRowConfigPos">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getNumRowConfigPosResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkCodeBranch">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="checkCodeBranch">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="checkCodeBranchResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNumRowConfig">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getNumRowConfig">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getNumRowConfigResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activeKeyNew">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="activeKeyNew">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="activeKeyNewResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLicenseKeyByShortKey">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getLicenseKeyByShortKey">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getLicenseKeyByShortKeyResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="countCategory">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="countCategory">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="countCategoryResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPointOfCustomer">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getPointOfCustomer">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getPointOfCustomerResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkSyncShop">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="checkSyncShop">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="checkSyncShopResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLicenseKey">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getLicenseKey">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getLicenseKeyResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCodeBranch">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="updateCodeBranch">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="updateCodeBranchResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activeKey">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="activeKey">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="activeKeyResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePointOfSwapCustomer">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="updatePointOfSwapCustomer">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="updatePointOfSwapCustomerResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CheckAllValuePos">
+    <wsdl:port binding="tns:CheckAllValuePosSoapBinding" name="CheckAllValuePosImplPort">
+      <soap:address location="http://www.shopy.vn/CheckAllValuePosImpl"></soap:address>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
