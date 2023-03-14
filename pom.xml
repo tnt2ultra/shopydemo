@@ -74,7 +74,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<generatePackage>ru.demo.pnpscada.soap.bindings</generatePackage>
+					<generatePackage>ru.demo.shopy.soap.bindings</generatePackage>
 					<generateDirectory>${project.basedir}/src/main/java</generateDirectory>
 					<schemaDirectory>${project.basedir}/src/main/resources/wsdl</schemaDirectory>
 					<schemaIncludes>
